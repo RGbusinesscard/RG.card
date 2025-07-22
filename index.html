@@ -2,150 +2,143 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>RG.card - Carte NFC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Light&display=swap" rel="stylesheet">
+    <title>RG.card - Carte Digitale</title>
     <style>
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
-            background: linear-gradient(160deg, #000000, #1a1a1a, #4d4d4d);
-            background-image: repeating-linear-gradient(45deg, #1a1a1a 0px, #1a1a1a 2px, #2e2e2e 2px, #2e2e2e 4px);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            color: white;
+            background: linear-gradient(to bottom right, #000000, #2a2a2a);
         }
-
-        .card {
-            background-color: rgba(0, 0, 0, 0.65);
-            width: 90vw;
-            height: 90vh;
-            border-radius: 30px;
-            padding: 50px 30px;
-            box-shadow: 0 0 80px rgba(255, 255, 255, 0.05);
+        .banniere-exemple {
+            width: 100%;
+            background-color: #cc0000;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
             text-align: center;
+            padding: 14px 10px;
+            letter-spacing: 1px;
+        }
+        .card {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            position: relative;
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
-        .logo-topright {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-style: italic;
-            font-weight: normal;
-            font-size: 36px;
-            color: #fff;
-            border: 2px solid #fff;
-            padding: 14px 24px;
-            border-radius: 6px;
-            background-color: #1a1a1a;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .slogan {
-            font-family: 'Roboto Light', sans-serif;
-            font-size: 22px;
-            color: #aaa;
-            margin-bottom: 40px;
-            font-style: italic;
-            letter-spacing: 1px;
-        }
-
-        h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-
-        p {
-            font-size: 28px;
-            color: #bbb;
-            margin-bottom: 40px;
-        }
-
-        .buttons a {
-            display: flex;
             align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #f0f0f0, #ffffff, #f0f0f0);
-            color: #000000;
-            text-decoration: none;
-            margin: 20px auto;
-            padding: 24px 0;
-            border-radius: 50px;
-            font-size: 28px;
-            width: 60%;
-            max-width: 600px;
-            height: 70px;
-            transition: background 0.3s, box-shadow 0.3s, transform 0.1s;
-            box-shadow: 0 0 20px rgba(255,255,255,0.4);
-            animation: glow 1.5s infinite alternate ease-in-out;
+            min-height: calc(100% - 60px);
+            width: 100%;
+            box-sizing: border-box;
+            padding: 40px 20px;
         }
-
-        .buttons a:hover {
-            background: linear-gradient(135deg, #ffffff, #dddddd, #ffffff);
-            box-shadow: 0 0 45px rgba(255,255,255,0.9);
+        .intro {
+            background-color: #1c1c1c;
+            padding: 40px 30px;
+            border-radius: 20px;
+            width: 95%;
+            max-width: 900px;
+            font-size: 2rem;
+            text-align: center;
+            color: #cccccc;
+            margin-bottom: 50px;
+            border: 2px solid #333333;
+            line-height: 1.6;
         }
-
-        .buttons a:active {
-            transform: scale(0.97);
+        h1 {
+            font-size: 4rem;
+            margin: 20px 0 15px 0;
         }
-
-        .buttons a span {
-            font-size: 36px;
-            margin-right: 20px;
-        }
-
-        @keyframes glow {
-            from { box-shadow: 0 0 20px rgba(255,255,255,0.4); }
-            to { box-shadow: 0 0 35px rgba(255,255,255,0.7); }
-        }
-
-        .about {
-            margin-top: 40px;
-            font-size: 22px;
+        .job-title {
+            font-size: 2.2rem;
             color: #aaa;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .company {
+            font-weight: bold;
+            color: #555555;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .buttons a {
+            background: white;
+            color: black;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+        .about {
             background-color: #2a2a2a;
             padding: 30px;
             border-radius: 20px;
-            line-height: 1.8;
+            width: 95%;
+            max-width: 800px;
+            font-size: 1.7rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .bottom-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .bottom-buttons a {
+            color: white;
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 18px 30px;
+            font-size: 1.7rem;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
+<div class="banniere-exemple">
+    ⚠️ Cette carte est fournie uniquement à titre d'exemple. Elle est la propriété exclusive de RG.card et ne peut être utilisée à des fins personnelles.
+</div>
+
 <div class="card">
 
-    <div class="logo-topright">RG</div>
-
-    <div class="slogan">PAS D'APPLI. PAS DE STRESS.<br>IL SUFFIT DE PASSER.</div>
+    <div class="intro">
+        Nous configurons et personnalisons entièrement vos cartes NFC professionnelles. Après nous avoir transmis votre lien (site, réseaux sociaux, Google, etc.), nous nous occupons de tout : encodage, fabrication et préparation. Vos cartes NFC sont prêtes à l'emploi et livrées prêtes à l'usage. Simple, rapide et sans application.
+    </div>
 
     <h1>RG.card</h1>
-    <p>Solutions NFC professionnelles</p>
+    <p class="job-title">Solutions NFC professionnelles</p>
+    <div class="company">PAS D'APPLI. PAS DE STRESS. IL SUFFIT DE PASSER.</div>
 
     <div class="buttons">
-        <a href="tel:0764021268"><span>📞</span> Appeler</a>
-        <a href="mailto:rg.businesscard@gmail.com"><span>✉️</span> Email</a>
-        <a href="https://www.instagram.com/rg.card" target="_blank">
-            <span>📷</span> Instagram
-        </a>
+        <a href="tel:+33764021268">📞</a>
+        <a href="mailto:rg.businesscard@gmail.com">✉️</a>
+        <a href="https://www.instagram.com/rg.card" target="_blank">📸</a>
+        <a href="#">📱</a>
     </div>
 
     <div class="about">
-        RG.card propose des cartes NFC personnalisées, résistantes et professionnelles.<br><br>
-        Contactez-nous pour des solutions clé en main adaptées à votre activité.
+        <strong>À propos</strong>
+        <p>Nous proposons des cartes et supports NFC personnalisés : simples, efficaces et sans application. 
+        Contactez-nous pour des solutions professionnelles clés en main.</p>
+    </div>
+
+    <div class="bottom-buttons">
+        <a href="https://www.instagram.com/rg.card" target="_blank">Instagram</a>
+        <a href="tel:+33764021268">Nous appeler</a>
     </div>
 </div>
 
