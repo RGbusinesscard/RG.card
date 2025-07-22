@@ -2,123 +2,116 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RG.card - Carte Digitale</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            color: white;
             background: linear-gradient(135deg, #000000, #000000, #bbbbbb);
+            color: white;
+            width: 100%;
         }
 
         .banniere-exemple {
             width: 100%;
             background-color: #cc0000;
-            color: white;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: bold;
             text-align: center;
-            padding: 14px 10px;
-            letter-spacing: 1px;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         .card {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
             width: 100%;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
             box-sizing: border-box;
-            padding: 30px 20px;
         }
 
         .intro, .about {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            padding: 40px 30px;
-            width: 95%;
-            max-width: 900px;
-            font-size: 1.7rem;
+            width: 100%;
+            font-size: 1rem;
             text-align: center;
-            color: #cccccc;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
         }
 
         h1 a {
-            font-size: 4rem;
-            font-weight: bold;
+            font-size: 2rem;
             color: white;
             text-decoration: none;
         }
 
-        h1 a:hover {
-            text-decoration: underline;
-        }
-
         .job-title, .company {
-            font-size: 1.9rem;
-            color: #aaa;
+            font-size: 1rem;
             text-align: center;
-        }
-
-        .company {
-            font-weight: bold;
-            color: #bbbbbb;
-            margin-bottom: 30px;
+            margin: 10px 0;
         }
 
         .buttons {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
-            margin-bottom: 30px;
+            gap: 15px;
+            margin: 20px 0;
+            width: 100%;
         }
 
         .button-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex: 1 1 80px;
         }
 
         .buttons a {
             background: white;
             color: black;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
             text-decoration: none;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         .button-label {
-            margin-top: 8px;
-            font-size: 1rem;
-            color: white;
+            font-size: 0.9rem;
+            margin-top: 5px;
             text-align: center;
         }
 
         .bottom-buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            margin-top: 20px;
         }
 
         .bottom-buttons a {
             color: white;
-            border: 2px solid white;
-            border-radius: 15px;
-            padding: 15px 25px;
-            font-size: 1.3rem;
+            border: 1px solid white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 1rem;
             text-decoration: none;
+            box-sizing: border-box;
         }
 
         .bottom-buttons a:hover {
@@ -130,7 +123,7 @@
 <body>
 
 <div class="banniere-exemple">
-    ⚠️ Cette carte est fournie uniquement à titre d'exemple. Elle est la propriété exclusive de RG.card et ne peut être utilisée à des fins personnelles.
+    ⚠️ Exemple. Propriété exclusive RG.card. Usage personnel interdit.
 </div>
 
 <div class="card">
@@ -140,6 +133,7 @@
     </div>
 
     <h1><a href="https://www.instagram.com/rg.card" target="_blank">RG.card</a></h1>
+
     <p class="job-title">Solutions NFC professionnelles</p>
     <div class="company">PAS D'APPLI. PAS DE STRESS. IL SUFFIT DE PASSER.</div>
 
@@ -159,14 +153,14 @@
     </div>
 
     <div class="about">
-        <strong>À propos</strong>
-        <p>Nous proposons des cartes et supports NFC personnalisés : simples, efficaces et sans application. Contactez-nous pour des solutions professionnelles clés en main.</p>
+        Cartes et supports NFC personnalisés : simples, efficaces et sans application. Contactez-nous pour vos solutions professionnelles.
     </div>
 
     <div class="bottom-buttons">
         <a href="https://www.instagram.com/rg.card" target="_blank">Instagram</a>
-        <a href="tel:+33764021268">Nous appeler</a>
+        <a href="tel:+33764021268">Appeler</a>
     </div>
+
 </div>
 
 </body>
