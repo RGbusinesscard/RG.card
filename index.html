@@ -7,11 +7,11 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
             font-family: Arial, sans-serif;
             color: white;
-            background: linear-gradient(to bottom right, #000000, #2a2a2a);
+            background: linear-gradient(135deg, #000000, #000000, #bbbbbb);
         }
+
         .banniere-exemple {
             width: 100%;
             background-color: #cc0000;
@@ -22,58 +22,70 @@
             padding: 14px 10px;
             letter-spacing: 1px;
         }
+
         .card {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            min-height: calc(100% - 60px);
             width: 100%;
             box-sizing: border-box;
-            padding: 40px 20px;
+            padding: 30px 20px;
         }
-        .intro {
-            background-color: #1c1c1c;
-            padding: 40px 30px;
+
+        .intro, .about {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 20px;
+            padding: 40px 30px;
             width: 95%;
             max-width: 900px;
-            font-size: 2rem;
+            font-size: 1.7rem;
             text-align: center;
             color: #cccccc;
-            margin-bottom: 50px;
-            border: 2px solid #333333;
+            margin-bottom: 30px;
             line-height: 1.6;
         }
-        h1 {
+
+        h1 a {
             font-size: 4rem;
-            margin: 20px 0 15px 0;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
         }
-        .job-title {
-            font-size: 2.2rem;
+
+        .job-title, .company {
+            font-size: 1.9rem;
             color: #aaa;
-            margin-bottom: 20px;
             text-align: center;
         }
+
         .company {
             font-weight: bold;
-            color: #555555;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
+            color: #bbbbbb;
+            margin-bottom: 30px;
         }
+
         .buttons {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 25px;
+            margin-bottom: 30px;
         }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .buttons a {
             background: white;
             color: black;
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -81,29 +93,33 @@
             text-decoration: none;
             font-size: 2rem;
         }
-        .about {
-            background-color: #2a2a2a;
-            padding: 30px;
-            border-radius: 20px;
-            width: 95%;
-            max-width: 800px;
-            font-size: 1.7rem;
-            margin-bottom: 40px;
+
+        .button-label {
+            margin-top: 8px;
+            font-size: 1rem;
+            color: white;
             text-align: center;
         }
+
         .bottom-buttons {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
+
         .bottom-buttons a {
             color: white;
             border: 2px solid white;
             border-radius: 15px;
-            padding: 18px 30px;
-            font-size: 1.7rem;
+            padding: 15px 25px;
+            font-size: 1.3rem;
             text-decoration: none;
+        }
+
+        .bottom-buttons a:hover {
+            background: white;
+            color: black;
         }
     </style>
 </head>
@@ -119,15 +135,23 @@
         Nous configurons et personnalisons entièrement vos cartes NFC professionnelles. Après nous avoir transmis votre lien (site, réseaux sociaux, Google, etc.), nous nous occupons de tout : encodage, fabrication et préparation. Vos cartes NFC sont prêtes à l'emploi et livrées prêtes à l'usage. Simple, rapide et sans application.
     </div>
 
-    <h1>RG.card</h1>
+    <h1><a href="https://www.instagram.com/rg.card" target="_blank">RG.card</a></h1>
     <p class="job-title">Solutions NFC professionnelles</p>
     <div class="company">PAS D'APPLI. PAS DE STRESS. IL SUFFIT DE PASSER.</div>
 
     <div class="buttons">
-        <a href="tel:+33764021268">📞</a>
-        <a href="mailto:rg.businesscard@gmail.com">✉️</a>
-        <a href="https://www.instagram.com/rg.card" target="_blank">📸</a>
-        <a href="#">📱</a>
+        <div class="button-wrapper">
+            <a href="tel:+33764021268">📞</a>
+            <div class="button-label">Téléphone</div>
+        </div>
+        <div class="button-wrapper">
+            <a href="mailto:rg.businesscard@gmail.com">✉️</a>
+            <div class="button-label">Email</div>
+        </div>
+        <div class="button-wrapper">
+            <a href="https://www.instagram.com/rg.card" target="_blank">📸</a>
+            <div class="button-label">Instagram</div>
+        </div>
     </div>
 
     <div class="about">
